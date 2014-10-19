@@ -1,5 +1,5 @@
 title:            Charon的博客
-description:      "Focus on Android, Java, Open Source, Performance Optimization"
+description:      "Focus on Android, IOS, Open Source, Performance Optimization"
 logo:        avatar.png     
 disqus_shortname: CharonChui
 # Assign a default image for your site's header and footer
@@ -60,7 +60,7 @@ links:
   - title: Tags
     url: /tags
   - title: About
-    url: /nianxi
+    url: /CharonChui
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    PRC
