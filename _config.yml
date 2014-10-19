@@ -1,6 +1,6 @@
-title:            CharonChui的博客
-description:      "Going against the wind is more suitable for flying"
-logo:             
+title:            Charon的博客
+description:      "Focus on Android, Java, Open Source, Performance Optimization"
+logo:        avatar.png     
 disqus_shortname: CharonChui
 # Assign a default image for your site's header and footer
 default_bg:       default_bg.jpg
@@ -27,13 +27,13 @@ owner:
   avatar:         avatar.png
   email:          charon.chui@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    一个无忧无虑的单线程妞
+  description:    十年生死两茫茫，不思量，自难忘，华年短暂，陈辞岁月悠悠伤， 满腔热血已芜荒，展未来，后生强，战战兢兢，如履薄冰心彷徨， 青丝化雪、鬓角成霜，已是英雄迟暮，人生怎慷慨激昂？
   # Social networking links used in footer. Update and remove as you like.
   twitter:       CharonChui
-  facebook:       
+  facebook:       CharonChui
   github:         CharonChui
-  stackexchange:  http://stackoverflow.com/users/904698/carina
-  linkedin:       http://blog.csdn.net/yiyaaixuexi
+  stackexchange:  
+  linkedin:       
   instagram:      
   flickr:
   tumblr:
