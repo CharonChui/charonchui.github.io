@@ -28,8 +28,8 @@ BroadcastReceiver安全问题
 - 相比在系统内发送全局广播，它更高效。
 
 ```java
- LocalBroadcastManager mLocalBroadcastManager;  
- BroadcastReceiver mReceiver;  
+LocalBroadcastManager mLocalBroadcastManager;  
+BroadcastReceiver mReceiver;  
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +49,10 @@ protected void onCreate(Bundle savedInstanceState) {
 	mLocalBroadcastManager.registerReceiver(mReceiver, filter);
 }
 
-
 @Override
 protected void onDestroy() {
-   mLocalBroadcastManager.unregisterReceiver(mReceiver);
-   super.onDestroy();
+	mLocalBroadcastManager.unregisterReceiver(mReceiver);
+	super.onDestroy();
 } 
 ```
 
