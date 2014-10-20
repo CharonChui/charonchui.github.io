@@ -65,8 +65,6 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    PRC
 future:      true
-highlighter: pygments
-markdown:    kramdown
 paginate:    3
 paginate_path: "page:num"
 
@@ -87,7 +85,9 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
-
-
+markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]\
+	
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

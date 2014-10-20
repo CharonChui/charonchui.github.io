@@ -50,7 +50,7 @@ public class VideoView extends SurfaceView
 {% endhighlight %}
 
 - 成员
-    - 播放器所有的状态
+	- 播放器所有的状态
 		{% highlight java %}
 		// all possible internal states
 		private static final int STATE_ERROR              = -1;
