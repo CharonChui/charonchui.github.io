@@ -22,6 +22,7 @@ Android安全退出应用程序
     `System.exit(0);`
 3. 强制关闭与该包有关联的一切执行     
     这种方法只能杀死别人，无法杀死自己     
+	
 {% highlight java %}
 ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);    
 manager.restartPackage(getPackageName());

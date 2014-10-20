@@ -10,9 +10,7 @@ imagefeature: about_bg.jpg
   <figcaption></figcaption>
 </figure>
 
-<center>卡伦</center>
-<center>俺的英文名字叫CharonChui</center>
-<center>俺为俺自己代盐</center>
+<center>CharonChui</center>
 <center>Android&IOS开发人员</center>
 <center>喜欢学习研究新技术</center>
 <center>有饭吃、有床睡，就够了</center>
