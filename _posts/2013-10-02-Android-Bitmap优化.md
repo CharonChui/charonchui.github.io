@@ -20,18 +20,20 @@ Bitmap优化
 2. 在`Android`应用里，最耗费内存的就是图片资源。而且在`Android`系统中，读取位图`Bitmap`时，分给虚拟机中的图片的堆栈大小只有8M，如果超出了，就会出现`OutOfMemory`异常。
 
 3. 及时回收Bitmap的内存
-{% highlight java %}
-// 先判断是否已经回收
-if(bitmap != null && !bitmap.isRecycled()){
-	// 回收并且置为null
-	bitmap.recycle();
-	bitmap = null;
-}
-System.gc();
-{% endhighlight %}
+
+	{% highlight java %}
+	// 先判断是否已经回收
+	if(bitmap != null && !bitmap.isRecycled()){
+		// 回收并且置为null
+		bitmap.recycle();
+		bitmap = null;
+	}
+	System.gc();
+	{% endhighlight %}
 
 4. 捕获异常     
     在实例化`Bitmap`的代码中，一定要对`OutOfMemory`异常进行捕获。下面对初始化`Bitmap`对象过程中可能发生的`OutOfMemory`异常进行了捕获。如果发生了异常，应用不会崩溃，而是得到了一个默认的图片。
+	
 {% highlight java %}
 Bitmap bitmap = null;
 try {
