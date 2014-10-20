@@ -51,29 +51,28 @@ public class VideoView extends SurfaceView
 
 - 成员
     - 播放器所有的状态
-{% highlight java %}
-// all possible internal states
-private static final int STATE_ERROR              = -1;
-private static final int STATE_IDLE               = 0;
-private static final int STATE_PREPARING          = 1;
-private static final int STATE_PREPARED           = 2;
-private static final int STATE_PLAYING            = 3;
-private static final int STATE_PAUSED             = 4;
-private static final int STATE_PLAYBACK_COMPLETED = 5;
-{% endhighlight %}
+		{% highlight java %}
+		// all possible internal states
+		private static final int STATE_ERROR              = -1;
+		private static final int STATE_IDLE               = 0;
+		private static final int STATE_PREPARING          = 1;
+		private static final int STATE_PREPARED           = 2;
+		private static final int STATE_PLAYING            = 3;
+		private static final int STATE_PAUSED             = 4;
+		private static final int STATE_PLAYBACK_COMPLETED = 5;
+		{% endhighlight %}
 	- 记录播放器状态
-{% highlight java %}
-// mCurrentState is a VideoView object's current state.
-// mTargetState is the state that a method caller intends to reach.
-// For instance, regardless the VideoView object's current state,
-// calling pause() intends to bring the object to a target state
-// of STATE_PAUSED.
-private int mCurrentState = STATE_IDLE;
-private int mTargetState  = STATE_IDLE;
-{% endhighlight %}		
+		{% highlight java %}
+		// mCurrentState is a VideoView object's current state.
+		// mTargetState is the state that a method caller intends to reach.
+		// For instance, regardless the VideoView object's current state,
+		// calling pause() intends to bring the object to a target state
+		// of STATE_PAUSED.
+		private int mCurrentState = STATE_IDLE;
+		private int mTargetState  = STATE_IDLE;
+		{% endhighlight %}		
 
 	- 主要功能部分
-	
 {% highlight java %}
 private SurfaceHolder mSurfaceHolder = null;// 显示图像
 private MediaPlayer mMediaPlayer = null; // 声音、播放
@@ -81,7 +80,6 @@ private MediaController mMediaController; // 播放控制
 {% endhighlight %}
 
 	- 其他
-	
 {% highlight java %}
 
 private int         mVideoWidth;  // 视频宽度 在onVideoSizeChanged() 和 onPrepared() 中可以得到具体大小
