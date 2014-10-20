@@ -21,6 +21,7 @@ VideoView
 基于Android4.4源码进行分析
 
 - 简介     
+
     {% highlight java %}
 	/**
 	 * Displays a video file.  The VideoView class
@@ -42,6 +43,7 @@ VideoView
 	{% endhighlight %}
 
 - 关系       
+
 	{% highlight java %}
 	public class VideoView extends SurfaceView
 			implements MediaPlayerControl
@@ -49,6 +51,7 @@ VideoView
 
 - 成员
     - 播放器所有的状态
+	
 		{% highlight java %}
 		// all possible internal states
 		private static final int STATE_ERROR              = -1;
@@ -61,6 +64,7 @@ VideoView
 		{% endhighlight %}
 
 	- 记录播放器状态
+	
 		{% highlight java %}
 		// mCurrentState is a VideoView object's current state.
 		// mTargetState is the state that a method caller intends to reach.
@@ -1575,6 +1579,7 @@ MediaController
 	{% endhighlight %}
 	
 - 构造方法
+
     {% highlight java %}
 	public MediaController(Context context, AttributeSet attrs) {
         super(context, attrs);
