@@ -77,11 +77,11 @@ VideoView
 
 	- 主要功能部分
 	
-		
+		{% highlight java %}
 		private SurfaceHolder mSurfaceHolder = null;// 显示图像
         private MediaPlayer mMediaPlayer = null; // 声音、播放
 		private MediaController mMediaController; // 播放控制
-		
+		{% endhighlight %}
 
 	- 其他
 	    {% highlight java %}
