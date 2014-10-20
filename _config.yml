@@ -86,7 +86,20 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: class
+	
+	
+markdown: redcarpet
+safe: true
+lsi: false
 
+redcarpet:
+extensions:
+- with_toc_data
+- hard_wrap
+- no_intra_emphasis
+- tables
+- fenced_code_blocks
+- autolink
 
 
 include: [".htaccess"]
