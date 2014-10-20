@@ -51,7 +51,6 @@ public class VideoView extends SurfaceView
 
 - 成员
     - 播放器所有的状态
-	
 {% highlight java %}
 // all possible internal states
 private static final int STATE_ERROR              = -1;
@@ -138,7 +137,7 @@ private void initVideoView() {
 }
 {% endhighlight %}
 		
-		SurfaceHolder.Callback源码
+	SurfaceHolder.Callback源码
 		
 {% highlight java %}
 SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback()
