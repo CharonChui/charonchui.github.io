@@ -87,20 +87,6 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 	
-	
-markdown: redcarpet
-safe: true
-lsi: false
-
-redcarpet:
-extensions:
-- with_toc_data
-- hard_wrap
-- no_intra_emphasis
-- tables
-- fenced_code_blocks
-- autolink
-
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
