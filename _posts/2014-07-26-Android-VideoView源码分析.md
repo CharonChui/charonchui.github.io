@@ -95,7 +95,7 @@ VideoView
 		
 - 具体实现
     - 构造方法
-	
+			{% highlight java %}
 			public VideoView(Context context) {
 				super(context);
 				initVideoView();
@@ -110,7 +110,8 @@ VideoView
 				super(context, attrs, defStyle);
 				initVideoView();
 			}
-		
+			{% endhighlight %}
+			
 		{% highlight java %}
 		// 进行一些必要信息的初始化设置
 		private void initVideoView() {
@@ -135,6 +136,7 @@ VideoView
 		{% endhighlight %}
 		
 		SurfaceHolder.Callback源码
+		
 		{% highlight java %}
 		SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback()
 		{
