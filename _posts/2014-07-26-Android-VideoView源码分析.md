@@ -21,7 +21,7 @@ VideoView
 基于Android4.4源码进行分析
 
 - 简介     
-    ```java 
+    {% highlight java %}
 	/**
 	 * Displays a video file.  The VideoView class
 	 * can load images from various sources (such as resources or content
@@ -39,17 +39,17 @@ VideoView
 	 * Also note that the audio session id (from {@link #getAudioSessionId}) may
 	 * change from its previously returned value when the VideoView is restored.
 	 */
-	```
+	{% endhighlight %}
 
 - 关系       
-	```java
+	{% highlight java %}
 	public class VideoView extends SurfaceView
 			implements MediaPlayerControl
-	```
+	{% endhighlight %}
 
 - 成员
     - 播放器所有的状态
-		```java
+		{% highlight java %}
 		// all possible internal states
 		private static final int STATE_ERROR              = -1;
 		private static final int STATE_IDLE               = 0;
@@ -58,10 +58,10 @@ VideoView
 		private static final int STATE_PLAYING            = 3;
 		private static final int STATE_PAUSED             = 4;
 		private static final int STATE_PLAYBACK_COMPLETED = 5;
-		```
+		{% endhighlight %}
 
 	- 记录播放器状态
-		```java
+		{% highlight java %}
 		// mCurrentState is a VideoView object's current state.
 		// mTargetState is the state that a method caller intends to reach.
 		// For instance, regardless the VideoView object's current state,
@@ -69,27 +69,27 @@ VideoView
 		// of STATE_PAUSED.
 		private int mCurrentState = STATE_IDLE;
 		private int mTargetState  = STATE_IDLE;
-		```		
+		{% endhighlight %}		
 
 	- 主要功能部分
-		```java
+		{% highlight java %}
 		private SurfaceHolder mSurfaceHolder = null;// 显示图像
         private MediaPlayer mMediaPlayer = null; // 声音、播放
 		private MediaController mMediaController; // 播放控制
-		```
+		{% endhighlight %}
 
 	- 其他
-	    ```java
+	    {% highlight java %}
 		private int         mVideoWidth;  // 视频宽度 在onVideoSizeChanged() 和 onPrepared() 中可以得到具体大小
 		private int         mVideoHeight;  //视频高度
 		private int         mSurfaceWidth; // Surface宽度  在SurfaceHolder.Callback.surfaceChanged() 中可以得到具体大小
 		private int         mSurfaceHeight; // Surface高度
 		private int         mSeekWhenPrepared;  // recording the seek position while preparing
-		```
+		{% endhighlight %}
 		
 - 具体实现
     - 构造方法
-	    ```java
+	    {% highlight java %}
 		public VideoView(Context context) {
 			super(context);
 			initVideoView();
@@ -104,9 +104,9 @@ VideoView
 			super(context, attrs, defStyle);
 			initVideoView();
 		}
-		```
+		{% endhighlight %}
 		
-		```java
+		{% highlight java %}
 		// 进行一些必要信息的初始化设置
 		private void initVideoView() {
 			mVideoWidth = 0;
@@ -127,10 +127,10 @@ VideoView
 			mCurrentState = STATE_IDLE;
 			mTargetState  = STATE_IDLE;
 		}
-		```
+		{% endhighlight %}
 		
 		SurfaceHolder.Callback源码
-		```java
+		{% highlight java %}
 		SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback()
 		{
 			public void surfaceChanged(SurfaceHolder holder, int format,
@@ -164,10 +164,10 @@ VideoView
 				release(true);
 			}
 		};
-		```
+		{% endhighlight %}
 		
 	- 重写onMeasure()方法
-		```java
+		{% highlight java %}
 		@Override
 	    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 	        int width = getDefaultSize(mVideoWidth, widthMeasureSpec);
@@ -234,10 +234,10 @@ VideoView
 			
 	        setMeasuredDimension(width, height);
 	    }
-		```
+		{% endhighlight %}
 	
 		- 附上getDefaultSize()源码 
-			```java
+			{% highlight java %}
 			/**
 			 * Utility to return a default size. Uses the supplied size if the
 			 * MeasureSpec imposed no constraints. Will get larger if allowed
@@ -263,10 +263,10 @@ VideoView
 				}
 				return result;
 			}
-			```
+			{% endhighlight %}
  
 	- 外部进行播放调用
-		```java
+		{% highlight java %}
 		public void setVideoPath(String path) {
 			setVideoURI(Uri.parse(path));
 		}
@@ -288,10 +288,10 @@ VideoView
 			requestLayout();
 			invalidate();
 		}
-		```
+		{% endhighlight %}
 		
 		- openVide() 源码
-		    ```java
+		    {% highlight java %}
 			private void openVideo() {
 				if (mUri == null || mSurfaceHolder == null) {
 					// not ready for playback just yet, will try again later
@@ -375,10 +375,10 @@ VideoView
 					mPendingSubtitleTracks.clear();
 				}
 			}
-			```
+			{% endhighlight %}
 			
 			release() 方法,在开始播放一个视频的时候会先调用该方法，然后重新创建一个，在SurfaceView销毁的时候也会调用该方法
-			```java
+			{% highlight java %}
 			/*
 			 * release the media player in any state
 			 */
@@ -394,10 +394,10 @@ VideoView
 					}
 				}
 			}
-			```
+			{% endhighlight %}
 		
 		- 外部停止播放调用
-			```java
+			{% highlight java %}
 			public void stopPlayback() {
 				if (mMediaPlayer != null) {
 					mMediaPlayer.stop();
@@ -407,10 +407,10 @@ VideoView
 					mTargetState  = STATE_IDLE;
 				}
 			}
-			```
+			{% endhighlight %}
 			
 		- 外部设置控制栏部分
-		    ```java
+		    {% highlight java %}
 			public void setMediaController(MediaController controller) {
 				if (mMediaController != null) {
 					mMediaController.hide();
@@ -431,11 +431,11 @@ VideoView
 					mMediaController.setEnabled(isInPlaybackState());
 				}
 			}
-			```
+			{% endhighlight %}
 			
 		- MediaPlayer必要监听
 			- OnVideoSizeChangedListener
-				```java
+				{% highlight java %}
 				MediaPlayer.OnVideoSizeChangedListener mSizeChangedListener =
 					new MediaPlayer.OnVideoSizeChangedListener() {
 						public void onVideoSizeChanged(MediaPlayer mp, int width, int height) {
@@ -449,10 +449,10 @@ VideoView
 							}
 						}
 				};
-				```
+				{% endhighlight %}
 
 		    - OnPreparedListener
-			    ```java
+			    {% highlight java %}
 				MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
 					public void onPrepared(MediaPlayer mp) {
 						mCurrentState = STATE_PREPARED;
@@ -514,10 +514,10 @@ VideoView
 						}
 					}
 				};
-				```
+				{% endhighlight %}
 				
 			- OnCompletionListener
-				```java
+				{% highlight java %}
 				private MediaPlayer.OnCompletionListener mCompletionListener =
 					new MediaPlayer.OnCompletionListener() {
 					public void onCompletion(MediaPlayer mp) {
@@ -531,10 +531,10 @@ VideoView
 						}
 					}
 				};
-				```
+				{% endhighlight %}
 				
 		- Touch以及Key的监听
-		    ```java
+		    {% highlight java %}
 			@Override
 			public boolean onTouchEvent(MotionEvent ev) {
 				if (isInPlaybackState() && mMediaController != null) {
@@ -543,10 +543,10 @@ VideoView
 				}
 				return false;
 			}
-			```
+			{% endhighlight %}
 
 		- toggleMediaControlsVisiblity      
-			```java
+			{% highlight java %}
 			private void toggleMediaControlsVisiblity() {
 				if (mMediaController.isShowing()) {
 					mMediaController.hide();
@@ -554,10 +554,10 @@ VideoView
 					mMediaController.show();
 				}
 			}
-			```
+			{% endhighlight %}
 				
 		- Key
-		    ```java
+		    {% highlight java %}
 			@Override
 			public boolean onKeyDown(int keyCode, KeyEvent event)
 			{
@@ -599,13 +599,13 @@ VideoView
 
 				return super.onKeyDown(keyCode, event);
 			}
-			```
+			{% endhighlight %}
 
 华丽丽的分割线 上源码
 ==============
 
 ----------------------
-```java
+{% highlight java %}
 /*
  * Copyright (C) 2006 The Android Open Source Project
  *
@@ -1468,14 +1468,14 @@ public class VideoView extends SurfaceView
         return Looper.getMainLooper();
     }
 }
-```
+{% endhighlight %}
 
 MediaPlayerControl
 ---
  
  通过该接口来打通MediaController以及VideoView
  
- ```java
+ {% highlight java %}
  public interface MediaPlayerControl {
 	void    start();
 	void    pause();
@@ -1495,13 +1495,13 @@ MediaPlayerControl
 	 */
 	int     getAudioSessionId();
 }
- ```
+ {% endhighlight %}
  
 MediaController
 ---
  
 - 简介            
-    ```java
+    {% highlight java %}
 	/**
 	* A view containing controls for a MediaPlayer. Typically contains the
 	* buttons like "Play/Pause", "Rewind", "Fast Forward" and a progress
@@ -1530,15 +1530,15 @@ MediaController
 	*   with the boolean set to false
 	* </ul>
 	*/
-	```
+	{% endhighlight %}
 
 - 关系
-    ```java
+    {% highlight java %}
 	public class MediaController extends FrameLayout
-	```
+	{% endhighlight %}
 
 - 成员
-	```java
+	{% highlight java %}
 	// 一些控制功能的接口
 	private MediaPlayerControl  mPlayer;
     private Context             mContext;
@@ -1572,10 +1572,10 @@ MediaController
     private ImageButton         mRewButton;
     private ImageButton         mNextButton;
     private ImageButton         mPrevButton;
-	```
+	{% endhighlight %}
 	
 - 构造方法
-    ```java
+    {% highlight java %}
 	public MediaController(Context context, AttributeSet attrs) {
         super(context, attrs);
         mRoot = this;
@@ -1602,10 +1602,10 @@ MediaController
     public MediaController(Context context) {
         this(context, true);
     }
-	```
+	{% endhighlight %}
 	
 	- initFloatingWindowLayout
-	    ```java
+	    {% highlight java %}
 		// Allocate and initialize the static parts of mDecorLayoutParams. Must
 		// also call updateFloatingWindowLayout() to fill in the dynamic parts
 		// (y and width) before mDecorLayoutParams can be used.
@@ -1623,10 +1623,10 @@ MediaController
 			p.token = null;
 			p.windowAnimations = 0; // android.R.style.DropDownAnimationDown;
 		}
-		```
+		{% endhighlight %}
 		
 	- initFloatingWindow
-	    ```java
+	    {% highlight java %}
 		private void initFloatingWindow() {
 		    // Android内核剖析 中有介绍
 			mWindowManager = (WindowManager)mContext.getSystemService(Context.WINDOW_SERVICE);
@@ -1648,10 +1648,10 @@ MediaController
 			setDescendantFocusability(ViewGroup.FOCUS_AFTER_DESCENDANTS);
 			requestFocus();
 		}
-		```
+		{% endhighlight %}
 		
 	- mTouchListener        
-		```java
+		{% highlight java %}
 		private OnTouchListener mTouchListener = new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -1662,20 +1662,20 @@ MediaController
 				return false;
 			}
 		};
-		```
+		{% endhighlight %}
 
 	- setMediaPlayer
 	    VideoView调用setMediaController的时候会调用到该方法
-	    ```java
+	    {% highlight java %}
 		public void setMediaPlayer(MediaPlayerControl player) {
 			mPlayer = player;
 			updatePausePlay();
 		}
-		```
+		{% endhighlight %}
 		
 	- setAnchorView
 		VideoView调用setMediaController的时候会调用到该方法
-	    ```java
+	    {% highlight java %}
 		/**
 		 * Set the view that acts as the anchor for the control view.
 		 * This can for example be a VideoView, or your Activity's main view.
@@ -1701,10 +1701,10 @@ MediaController
 			View v = makeControllerView();
 			addView(v, frameParams);
 		}
-		```
+		{% endhighlight %}
 		
 		- mLayoutChangeListener
-		    ```java
+		    {% highlight java %}
 			// This is called whenever mAnchor's layout bound changes
 			private OnLayoutChangeListener mLayoutChangeListener =
 					new OnLayoutChangeListener() {
@@ -1718,10 +1718,10 @@ MediaController
 					}
 				}
 			};
-			```
+			{% endhighlight %}
 
 			- updateFloatingWindowLayout
-			    ```java
+			    {% highlight java %}
 				// Update the dynamic parts of mDecorLayoutParams
 				// Must be called with mAnchor != NULL.
 				private void updateFloatingWindowLayout() {
@@ -1738,10 +1738,10 @@ MediaController
 					p.x = anchorPos[0] + (mAnchor.getWidth() - p.width) / 2;
 					p.y = anchorPos[1] + mAnchor.getHeight() - mDecor.getMeasuredHeight();
 				}
-				```
+				{% endhighlight %}
 				
 		- makeControllerView
-		    ```java
+		    {% highlight java %}
 			/**
 			 * Create the view that holds the widgets that control playback.
 			 * Derived classes can override this to create their own.
@@ -1756,20 +1756,20 @@ MediaController
 
 				return mRoot;
 			}
-			```
+			{% endhighlight %}
 			
 	- touch事件处理
-	    ```java
+	    {% highlight java %}
 		@Override
 		public boolean onTouchEvent(MotionEvent event) {
 			show(sDefaultTimeout);
 			return true;
 		}
-		```
+		{% endhighlight %}
 
 	- 进度的处理
 		- seekBar的处理
-			```java
+			{% highlight java %}
 			// There are two scenarios that can trigger the seekbar listener to trigger:
 			//
 			// The first is the user using the touchpad to adjust the posititon of the
@@ -1821,10 +1821,10 @@ MediaController
 					mHandler.sendEmptyMessage(SHOW_PROGRESS);
 				}
 			};
-			```
+			{% endhighlight %}
 			
 		- SetProgress
-            ```java
+            {% highlight java %}
 			private int setProgress() {
 				if (mPlayer == null || mDragging) {
 					return 0;
@@ -1848,10 +1848,10 @@ MediaController
 
 				return position;
 			}
-			```
+			{% endhighlight %}
 			
 		- show
-        	```java
+        	{% highlight java %}
         	/**
              * Show the controller on screen. It will go away
              * automatically after 'timeout' milliseconds of inactivity.
@@ -1884,10 +1884,10 @@ MediaController
                     mHandler.sendMessageDelayed(msg, timeout);
                 }
             }
-        	```
+        	{% endhighlight %}
 
     	- hide
-    	    ```java
+    	    {% highlight java %}
     		/**
     		 * Remove the controller from the screen.
     		 */
@@ -1906,12 +1906,12 @@ MediaController
     				mShowing = false;
     			}
     		}
-    		```
+    		{% endhighlight %}
 	
 上源码
 ===
 
-```java
+{% highlight java %}
 /*
  * Copyright (C) 2006 The Android Open Source Project
  *
@@ -2600,7 +2600,7 @@ public class MediaController extends FrameLayout {
         int     getAudioSessionId();
     }
 }
-```
+{% endhighlight %}
  
 ---
 

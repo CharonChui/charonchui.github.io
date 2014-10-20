@@ -28,7 +28,7 @@ BroadcastReceiver安全问题
 - 相比在系统内发送全局广播，它更高效。
 
 
-```java
+{% highlight java %}
 LocalBroadcastManager mLocalBroadcastManager;  
 BroadcastReceiver mReceiver;  
 
@@ -55,7 +55,7 @@ protected void onDestroy() {
 	mLocalBroadcastManager.unregisterReceiver(mReceiver);
 	super.onDestroy();
 } 
-```
+{% endhighlight %}
 
 ---
 
