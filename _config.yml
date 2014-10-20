@@ -65,7 +65,8 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    PRC
 future:      true
-markdown: redcarpet
+highlighter: pygments
+markdown:    redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 paginate:    3
