@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BroadcastReceiver安全问题"
-description: "Quit application security on Android"
+description: "Security issues about BroadcastReceiver"
 category: Android
 tags: [Android开发]
 imagefeature: pic-2014-09-08.jpg

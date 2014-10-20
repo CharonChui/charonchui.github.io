@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VideoView源码分析"
-description: "Quit application security on Android"
+description: "VideoView source code analysis"
 category: Android
 tags: [Android开发]
 imagefeature: pic-2014-09-08.jpg
