@@ -76,14 +76,16 @@ VideoView
 		{% endhighlight %}		
 
 	- 主要功能部分
-		{% highlight java %}
+	
+		
 		private SurfaceHolder mSurfaceHolder = null;// 显示图像
         private MediaPlayer mMediaPlayer = null; // 声音、播放
 		private MediaController mMediaController; // 播放控制
-		{% endhighlight %}
+		
 
 	- 其他
 	    {% highlight java %}
+		
 		private int         mVideoWidth;  // 视频宽度 在onVideoSizeChanged() 和 onPrepared() 中可以得到具体大小
 		private int         mVideoHeight;  //视频高度
 		private int         mSurfaceWidth; // Surface宽度  在SurfaceHolder.Callback.surfaceChanged() 中可以得到具体大小
@@ -93,22 +95,21 @@ VideoView
 		
 - 具体实现
     - 构造方法
-	    {% highlight java %}
-		public VideoView(Context context) {
-			super(context);
-			initVideoView();
-		}
+	
+			public VideoView(Context context) {
+				super(context);
+				initVideoView();
+			}
 
-		public VideoView(Context context, AttributeSet attrs) {
-			this(context, attrs, 0);
-			initVideoView();
-		}
+			public VideoView(Context context, AttributeSet attrs) {
+				this(context, attrs, 0);
+				initVideoView();
+			}
 
-		public VideoView(Context context, AttributeSet attrs, int defStyle) {
-			super(context, attrs, defStyle);
-			initVideoView();
-		}
-		{% endhighlight %}
+			public VideoView(Context context, AttributeSet attrs, int defStyle) {
+				super(context, attrs, defStyle);
+				initVideoView();
+			}
 		
 		{% highlight java %}
 		// 进行一些必要信息的初始化设置
