@@ -33,19 +33,19 @@ System.gc();
 
 - 捕获异常     
     在实例化`Bitmap`的代码中，一定要对`OutOfMemory`异常进行捕获。下面对初始化`Bitmap`对象过程中可能发生的`OutOfMemory`异常进行了捕获。如果发生了异常，应用不会崩溃，而是得到了一个默认的图片。
-
-		Bitmap bitmap = null;
-		try {
-			// 实例化Bitmap
-			bitmap = BitmapFactory.decodeFile(path);
-		} catch (OutOfMemoryError e) {
-		//
-		}
-		if (bitmap == null) {
-			// 如果实例化失败 返回默认的Bitmap对象
-			return defaultBitmapMap;
-		}
-
+{% highlight java %}
+Bitmap bitmap = null;
+try {
+	// 实例化Bitmap
+	bitmap = BitmapFactory.decodeFile(path);
+} catch (OutOfMemoryError e) {
+//
+}
+if (bitmap == null) {
+	// 如果实例化失败 返回默认的Bitmap对象
+	return defaultBitmapMap;
+}
+{% endhighlight %}
 -  缓存通用的Bitmap对象
 
 - 压缩图片
