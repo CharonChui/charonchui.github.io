@@ -66,9 +66,7 @@ links:
 timezone:    PRC
 future:      true
 highlighter: pygments
-markdown:    redcarpet
-redcarpet:
-    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+markdown:    kramdown
 paginate:    3
 paginate_path: "page:num"
 
