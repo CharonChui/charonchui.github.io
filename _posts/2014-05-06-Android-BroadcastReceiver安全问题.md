@@ -27,6 +27,7 @@ BroadcastReceiver安全问题
 - 不用担心别的应用伪造广播，造成安全隐患。
 - 相比在系统内发送全局广播，它更高效。
 
+
 ```java
 LocalBroadcastManager mLocalBroadcastManager;  
 BroadcastReceiver mReceiver;  
