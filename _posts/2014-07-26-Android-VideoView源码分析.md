@@ -61,9 +61,7 @@ private static final int STATE_PLAYING            = 3;
 private static final int STATE_PAUSED             = 4;
 private static final int STATE_PLAYBACK_COMPLETED = 5;
 {% endhighlight %}
-
 	- 记录播放器状态
-	
 {% highlight java %}
 // mCurrentState is a VideoView object's current state.
 // mTargetState is the state that a method caller intends to reach.
