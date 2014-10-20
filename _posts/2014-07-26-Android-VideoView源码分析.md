@@ -237,7 +237,7 @@ VideoView
 		{% endhighlight %}
 	
 		- 附上getDefaultSize()源码 
-			{% highlight java %}
+			
 			/**
 			 * Utility to return a default size. Uses the supplied size if the
 			 * MeasureSpec imposed no constraints. Will get larger if allowed
@@ -263,7 +263,7 @@ VideoView
 				}
 				return result;
 			}
-			{% endhighlight %}
+			
  
 	- 外部进行播放调用
 		{% highlight java %}
