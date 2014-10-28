@@ -15,7 +15,7 @@ published: true
 Android动画
 ===
 
-1. AlphaAnimation
+- AlphaAnimation
 
 {% highlight java %}
 RelativeLayout rl_splash = (RelativeLayout) findViewById(R.id.rl_splash);
@@ -27,7 +27,7 @@ animation.setDuration(2000);
 rl_splash.setAnimation(animation);
 {% endhighlight %}
 
-2. RotateAnimation
+- RotateAnimation
 
 {% highlight java %}
 //相对于自身的哪个位置旋转，这里是相对于自身的右下角
@@ -40,21 +40,21 @@ ra.setRepeatMode(Animation.RESTART);
 iv_scan.startAnimation(ra);
  {% endhighlight %}
  
-3. ScaleAnimation(缩放动画)    
+- ScaleAnimation(缩放动画)    
      
 {% highlight java %} 
 ScaleAnimation(float fromX, float toX, float fromY, float toY) 
 Constructor to use when building a ScaleAnimation from code
 {% endhighlight %}
 
-4. TranslateAnimation(位移动画)     
+- TranslateAnimation(位移动画)     
     
 {% highlight java %}
 TranslateAnimation(int fromXType, float fromXValue, int toXType, float toXValue, int fromYType, float fromYValue, int toYType, float toYValue) 
 Constructor to use when building a TranslateAnimation from code
 {% endhighlight %}
 
-5. AnimationSet (多组动画)
+- AnimationSet (多组动画)
     
 {% highlight java %}
 ScaleAnimation sa = new ScaleAnimation(0.2f, 1.0f, 0.4f,1.0f);//缩放的动画效果,1.0f就代表窗体的总宽或者高
@@ -71,10 +71,9 @@ set.addAnimation(ta);
 contentView.startAnimation(set); // 播放一组动画. 
 {% endhighlight %}
 
-6. Frame动画    
+- Frame动画    
 
-    - 在`drawable`目录下新建一个`xml`文件，内容如下:
-    
+    - 在`drawable`目录下新建一个`xml`文件，内容如下: 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
@@ -87,9 +86,7 @@ contentView.startAnimation(set); // 播放一组动画.
 		android:duration="100"/>
 </animation-list>
 {% endhighlight %}
-
     - 播放Frame动画
-    
 {% highlight java %}
 AnimationDrawable rocketAnimation;
 public void onCreate(Bundle savedInstanceState) {
@@ -106,7 +103,7 @@ public void start(View view) {
 }
 {% endhighlight %}
         
-7. 保持动画播放完成后的状态`animation.setFillAfter(true);`   
+- 保持动画播放完成后的状态`animation.setFillAfter(true);`   
 
 {% highlight java %}
 Interpolator //定义了动画的变化速度，可以实现匀速、正加速、负加速、无规则变加速度
