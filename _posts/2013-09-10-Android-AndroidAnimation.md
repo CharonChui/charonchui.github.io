@@ -75,7 +75,7 @@ contentView.startAnimation(set); // 播放一组动画.
 
     - 在`drawable`目录下新建一个`xml`文件，内容如下:
     
-{% endhighlight %}xml
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
 	android:oneshot="true" > //onshot是指定是否循环播放
