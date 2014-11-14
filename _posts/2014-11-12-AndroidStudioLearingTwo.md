@@ -1,7 +1,7 @@
-﻿---
+---
 layout: post
 title: "AndroidStudio使用教程(第二弹)"
-description: "Android Studio Learing"
+description: "Android Studio Learing Two"
 category: Android
 tags: [Android开发]
 imagefeature: pic-2014-09-08.jpg
