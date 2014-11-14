@@ -21,10 +21,10 @@ LayoutInflater.inflate详解
 实例。 
 
 例如：　　　　
-```java
+{% highlight java %}
 LayoutInflater inflater = (LayoutInflater)context.getSystemService
       (Context.LAYOUT_INFLATER_SERVICE);
-```               
+{% endhighlight %}               
 
 如果要在自己的`views`中通过`LayoutInflater.Factory`来创建`LayoutInflater`你可以用`cloneInContext(Context)`来克隆一个当前存在的`ViewFactory`然后再用`setFactory(LayoutInfalter.FActory)`
 来设置成自己的`FActory`.	              
@@ -49,7 +49,7 @@ LayoutInflater inflater = (LayoutInflater)context.getSystemService
 ---
 
 大家肯定遇到过在`ListView`的`item`布局中设置的高度没有效果的问题。 
-```java
+{% highlight java %}
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dip"
@@ -62,26 +62,26 @@ LayoutInflater inflater = (LayoutInflater)context.getSystemService
 </LinearLayout>
 ``
 
-```java
+{% highlight java %}
 public View getView(int position, View convertView, ViewGroup parent) {
     if (convertView == null) {
         convertView = inflate(R.layout.item_lv_test, null);
     }
     return convertView;
 }
-```
+{% endhighlight %}
 
 如果用上面的代码会发现设置`100dp`是无效的。     
 
 而如果换成
-```java
+{% highlight java %}
 public View getView(int position, View convertView, ViewGroup parent) {
     if (convertView == null) {
         convertView = inflate(R.layout.item_lv_test, null, false);
     }
     return convertView;
 }
-```
+{% endhighlight %}
 这里你该会想一想为什么很多需要显示`View`的方法中都有`ViewGroup`这个参数。      
 所以有些人会说在跟布局中设置是无效的，要再嵌套一层布局。 这样是错误的， 太多的嵌套是不合理的，对性能有影响。    
 
@@ -94,12 +94,12 @@ public View getView(int position, View convertView, ViewGroup parent) {
 	
 - `View.inflate()`方法与`LayoutInflater.inflate()`的区别
     直接上源码：     
-	```java
+	{% highlight java %}
 	public static View inflate(Context context, int resource, ViewGroup root) {
         LayoutInflater factory = LayoutInflater.from(context);
         return factory.inflate(resource, root);
     }
-	```
+	{% endhighlight %}
 
 ---
 

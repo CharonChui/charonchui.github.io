@@ -28,13 +28,13 @@ AndroidStudio使用教程(第二弹)
 	    在`Android Studio`中选择`Import Project`,并选择刚才工程目录下的`build.gradle`即可。           
 
 		有些时候会发现导入之后在运行按钮左边显示不出`Module`来，可能是你导入之前的`SDK`版本不同导致的，只要在`build.gradle`中配置相应的`SDK`版本就可以了。           
-		```java
+		{% highlight java %}
 		android {
 			compileSdkVersion 19
 			buildToolsVersion "21.1.1"
 			...
 			}
-		```
+		{% endhighlight %}
 	
 - 创建工程     
     创建工程和`Eclipse`流程基本差不多，大家一看就明白了，这里就不说了。
