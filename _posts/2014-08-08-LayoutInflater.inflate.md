@@ -49,7 +49,7 @@ LayoutInflater inflater = (LayoutInflater)context.getSystemService
 ---
 
 大家肯定遇到过在`ListView`的`item`布局中设置的高度没有效果的问题。 
-{% highlight java %}
+{% highlight xml %}
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dip"
@@ -60,7 +60,7 @@ LayoutInflater inflater = (LayoutInflater)context.getSystemService
         android:layout_height="wrap_content"
         android:text="test" />
 </LinearLayout>
-``
+{% endhighlight %}    
 
 {% highlight java %}
 public View getView(int position, View convertView, ViewGroup parent) {
