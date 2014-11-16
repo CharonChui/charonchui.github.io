@@ -13,7 +13,7 @@ published: true
 
 AndroidStudio使用教程(第四弹)
 ===
-   
+
 Gradle
 ---
 
@@ -38,7 +38,7 @@ Overview
 - 用同一个工程根据不同的特性来创建多个`APK`。    
 - 重复利用代码和资源。    
 `Android Studio`灵活的`build`系统能让你不用修改项目和核心文件而完成上面所有的工作。 
-		
+
 Overview of the Build System
 ---
 
@@ -52,7 +52,7 @@ Build configuration
 ---
 
 项目的构建配置都在`Gralde build files`中， 都是些符合`Gradle`要求的选项和语法，`Android`插件并不依赖`Android
-通过`build`文件来配置一下几个方面：   
+通过`build`文件来配置一下几个方面：      
 - `Build variants` 构建系统能对同一个项目通过不同的配置生成多个`APK`，当你想构建多个不同版本时这是非常有用的，因为不用为他们建立多个不同的项目。    
 - `Dependencies` 构建系统管理项目的依赖关系，并且支持本地已经远程仓库的依赖关系。 这样你就不用再去搜索、下载，然后再拷贝相应的包到你工程的目录了。 
 - `Manifest entries` 构建系统能够通过构建配置去指定清单文件中中某些元素的值。 当你想生成一些包名、最低`SDK`版本或目标`SDK`版本不同的`APK`时是非常有用的。
@@ -85,26 +85,26 @@ Dependencies
 `Android Studio`的构建系统管理着依赖项目并且支持`module`依赖，  本地二进制文件依赖和远程二进制文件的依赖。 
 
 - `Module Dependencies`
-    一个项目的`module`可以在构建未见中包含一系列所依赖的其他`modules`， 在你构建这个`module`的时候，系统回去组装这些所包含的`modules`. 
+一个项目的`module`可以在构建未见中包含一系列所依赖的其他`modules`， 在你构建这个`module`的时候，系统回去组装这些所包含的`modules`. 
 - `Local Dependencies`
-    如果本地文件系统中有`module`所依赖的二进制包如`JAR`包， 你可以在该`module`中的构建文件中声明这些依赖关系。 
+如果本地文件系统中有`module`所依赖的二进制包如`JAR`包， 你可以在该`module`中的构建文件中声明这些依赖关系。 
 - `Remote Dependencies`
-    当你的依赖是在远程仓库中，你不需要去下载他们然后拷贝到自己的工程中。 `Android Studio`支持远程`Maven`依赖。 `Maven`是一个流行的项目管理工具，它可以使用仓库帮助组织项目依赖。         
-	
-	许多优秀的软件类库和工具都在公共的`Maven`仓库中， 对于这些依赖只需按照远程仓库中不同元素的定义来指定他们的`Moven`位置即可。 构建系统使用的`Maven`位置格式是`group:name:version`. 例如`Google Guava`16.0.1版本类库的`Maven`坐标是
-	`com.google.guava:guava:16.0.1`.      
-	
-	` Maven Central Repository`现在被广泛用于分发许多类库和工具。 
-	
+当你的依赖是在远程仓库中，你不需要去下载他们然后拷贝到自己的工程中。 `Android Studio`支持远程`Maven`依赖。 `Maven`是一个流行的项目管理工具，它可以使用仓库帮助组织项目依赖。         
+
+许多优秀的软件类库和工具都在公共的`Maven`仓库中， 对于这些依赖只需按照远程仓库中不同元素的定义来指定他们的`Moven`位置即可。 构建系统使用的`Maven`位置格式是`group:name:version`. 例如`Google Guava`16.0.1版本类库的`Maven`坐标是
+`com.google.guava:guava:16.0.1`.      
+
+` Maven Central Repository`现在被广泛用于分发许多类库和工具。 
+
 下面分别为以上三种依赖关系的配置；   
-```
+{% highlight java %}
 dependencies {
-    compile project(":name")
-	compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.google.guava:guava:16.0.1'
+compile project(":name")
+compile fileTree(dir: 'libs', include: ['*.jar'])
+compile 'com.google.guava:guava:16.0.1'
 }
-```
-	
+{% endhighlight %}
+
 Build tasks
 ---
 
@@ -127,8 +127,11 @@ The Gradle wrapper
 `Android Studio`从你项目中的`Gradle wrapper`目录读取配置文件，并且在该目录运行`wrapper`， 这样在处理多个需要不同`Gradle`版本的项目时就会游刃有余。 
 *声明：*`Android Studio`不使用`shell`脚本，所以对于他们的任何改变在`IDE`构建时都不会生效，你应该在`Gradle build files`中去设置自定义的逻辑。       
 
-你可以在开发及其或者是一些没有安装`Android Studio`的及其上使用命令行运行`shell`脚本来构建项目。             
-		
+你可以在开发及其或者是一些没有安装`Android Studio`的及其上使用命令行运行`shell`脚本来构建项目。   
+
+直接上图：   
+![Image](https://github.com/CharonChui/AndroidNote/blob/master/Pic/AndroidStudio_4_1.png?raw=true)	            
+
 ---
 
 - 邮箱 ：charon.chui@gmail.com  
