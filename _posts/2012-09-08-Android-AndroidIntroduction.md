@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Android基础_介绍"
-description: "Android introducation"
+title: "Android入门介绍"
+description: "Android Introducation"
 category: Android
-tags: [Android开发]
+tags: [Android]
 imagefeature: blog/bg.jpg
 comments: true
 mathjax: null
@@ -12,7 +12,7 @@ published: true
 ---
 
 
-Android基础_介绍
+Android入门介绍
 ===
 
 1. 3G、4G
@@ -101,6 +101,7 @@ Android基础_介绍
 
 9. 测试分类    
     单元测试(Unit test) -> 功能测试( Function test) ->集成测试(Intergation test)
+	
 10. Android单元测试
     - AndroidManifest.xml中进行配置,导入android的junit环境
     - 编写测试类继承Android的测试父类,AndroidTestCase这个类( AndroidTestCase是为了去模拟一个手机的运行环境， 这个类中有一个getContext方法能获取到当前测试类的应用上下文对象，所以这个方法必须要等到测试框架初始化完成后才可以去调用)
@@ -113,5 +114,4 @@ Android基础_介绍
 
 - 邮箱 ：charon.chui@gmail.com  
 - Good Luck! 
- 
 

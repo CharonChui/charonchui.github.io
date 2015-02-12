@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Android安全退出应用程序"
+title: "安全退出应用程序"
 description: "Quit application security on Android"
 category: Android
-tags: [Android开发]
+tags: [Android]
 imagefeature: pic-2014-09-08.jpg
 comments: true
 mathjax: null
@@ -12,7 +12,7 @@ published: true
 ---
 
 
-Android安全退出应用程序
+安全退出应用程序
 ===
 
 1. 杀死进程。    
@@ -22,18 +22,17 @@ Android安全退出应用程序
     `System.exit(0);`
 3. 强制关闭与该包有关联的一切执行     
     这种方法只能杀死别人，无法杀死自己     
-	
-{% highlight java %}
-ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);    
-manager.restartPackage(getPackageName());
-同时需要申请权限
-<uses-permission android:name="android.permission.RESTART_PACKAGES" />
-{% endhighlight %}
+    ```java
+    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);    
+    manager.restartPackage(getPackageName());
+    同时需要申请权限
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    ```
 
 既然上面介绍的三种方法都没有效果，那么怎么才能退出应用程序呢？        
-就是自定义一个`Application`,在该`Application`中去定义一个`List<Activity>`的集合来记录中每一个开启的`Activity`，在退出的时候去遍历这个`List<Activity>`集合，然后挨个的进行`mActivity.finish()`方法，这要求在每开启一个`Activity`的时候都加入到`List`集合中，并且在`Activity`退出的时候从`List`集合中将其移除。  
-         
-{% highlight java %}
+就是自定义一个`Application`,在该`Application`中去定义一个`List<Activity>`的集合来记录中每一个开启的`Activity`，在退出的时候去遍历这个`List<Activity>`集合，
+然后挨个的进行`mActivity.finish()`方法，这要求在每开启一个`Activity`的时候都加入到`List`集合中，并且在`Activity`退出的时候从`List`集合中将其移除。       
+```java
 public class Activity01 extends Activity {
 	
 	@Override
@@ -112,7 +111,7 @@ public class MyApp extends Application {
 		super.onCreate();
 	} 
 }
-{% endhighlight %}
+```
 
 ---
 
