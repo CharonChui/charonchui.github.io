@@ -2,7 +2,7 @@
 layout: post
 title: "JNI基础"
 description: "Android JNI"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

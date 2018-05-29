@@ -2,7 +2,7 @@
 layout: post
 title: "Android基础面试题"
 description: "Android Interview"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

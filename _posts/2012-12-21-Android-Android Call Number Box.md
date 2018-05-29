@@ -2,7 +2,7 @@
 layout: post
 title: "来电号码归属地提示框"
 description: "Android Call Number Box"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

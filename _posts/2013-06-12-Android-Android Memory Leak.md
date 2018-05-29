@@ -2,7 +2,7 @@
 layout: post
 title: "内存泄露"
 description: "Android SearchBox"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

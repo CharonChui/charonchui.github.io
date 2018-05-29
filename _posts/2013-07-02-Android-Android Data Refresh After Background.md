@@ -2,7 +2,7 @@
 layout: post
 title: "应用后台唤醒后数据的刷新"
 description: "Android Data Refresh After Background"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

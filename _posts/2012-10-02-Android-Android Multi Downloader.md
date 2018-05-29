@@ -2,7 +2,7 @@
 layout: post
 title: "多线程断点下载"
 description: "Android Multi Downloader"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

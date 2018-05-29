@@ -2,7 +2,7 @@
 layout: post
 title: "Android编码规范"
 description: "Android Code Style"
-category: Andorid Memory Leak
+category:Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

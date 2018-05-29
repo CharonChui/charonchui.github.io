@@ -2,7 +2,7 @@
 layout: post
 title: "零权限上传数据"
 description: "Android Upload Withoud Permissions"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true

@@ -2,7 +2,7 @@
 layout: post
 title: "知识大杂烩"
 description: "Android Hodgepodge"
-category: Andorid Memory Leak
+category: Andorid BasicKnowledge
 tags: [Andorid BasicKnowledge]
 imagefeature: blog/bg.jpg
 comments: true
