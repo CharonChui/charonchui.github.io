@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Kotlin学习教程(十)"
-description: "10.Kotlin Learing Course"
-category: Andorid JavaKnowledge
-tags: [Andorid JavaKnowledge]
+title: "HttpURLConnection与HttpClient"
+description: "HttpURLConnection vs HttpClient"
+category: SourceAnalysis
+tags: [SourceAnalysis]
 imagefeature: blog/bg.jpg
 comments: true
 mathjax: null
@@ -13,4 +13,4 @@ published: true
 
 
 
-2017-08-07-Android-10.Kotlin Learing Course
+2013-01-07-Android-HttpURLConnection vs HttpClient
