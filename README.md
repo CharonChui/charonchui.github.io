@@ -1,7 +1,7 @@
 CharonChui的博客
 ===
 
-基于`jekyll`的个人博客站点http://www.charonchui.com      
+基于`jekyll`的个人博客站点http://www.charon.top .   
 感谢[hmfaysal](https://github.com/hmfaysal) 提供的`jekyll`主题     
 感谢[CarinaTT](https://github.com/CarinaTT) 进一步美化
 
