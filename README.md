@@ -9,7 +9,7 @@ CharonChui的博客
 关于我
 ==
 
-Android开发者 +IOS开发者 + Google脑残粉，爱技术， 爱开源。      
+Android开发者 +iOS开发者 + Google脑残粉，爱技术， 爱开源。      
 有饭吃、有床睡，就够了。
 
 Developed By

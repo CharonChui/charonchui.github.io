@@ -11,7 +11,7 @@ imagefeature: about_bg.jpg
 </figure>
 
 <center>CharonChui</center>
-<center>Android&IOS开发人员</center>
+<center>Android&iOS开发人员</center>
 <center>喜欢学习研究新技术</center>
 <center>有饭吃、有床睡，就够了</center>
 <center>然后</center>
