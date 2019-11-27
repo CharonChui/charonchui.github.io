@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /nianxi/index.html
+permalink: /charon/index.html
 title: 关于我
 tags:
 imagefeature: about_bg.jpg
