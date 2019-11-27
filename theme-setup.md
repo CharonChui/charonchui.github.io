@@ -186,7 +186,7 @@ If you want to set a background image for the entire site just add `background: 
 
 The rest is just your average Jekyll config settings. Nothing too crazy here...
 
-### _includes
+### _includes0
 
 For the most part you can leave these as is since the author/owner details are pulled from `_config.yml`. That said you'll probably want to customize the copyright stuff in `footer.html` to your liking.
 
