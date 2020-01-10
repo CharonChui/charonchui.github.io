@@ -1,3 +1,18 @@
+---
+layout: post
+title: "ART与Dalvik"
+description: ""
+category: AdavancedPart
+tags: [AdavancedPart]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
+
+
 ART与Dalvik
 ===
 

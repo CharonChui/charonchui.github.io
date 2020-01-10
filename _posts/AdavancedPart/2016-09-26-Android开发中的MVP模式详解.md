@@ -1,3 +1,17 @@
+---
+layout: post
+title: "Android开发中的MVP模式详解"
+description: ""
+category: AdavancedPart
+tags: [AdavancedPart]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
+
 Android开发中的MVP模式详解
 ===
 

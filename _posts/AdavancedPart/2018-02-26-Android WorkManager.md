@@ -1,3 +1,17 @@
+---
+layout: post
+title: "Android WorkManager"
+description: ""
+category: AdavancedPart
+tags: [AdavancedPart]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
+
 Android WorkManager
 ===
 

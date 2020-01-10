@@ -1,3 +1,17 @@
+---
+layout: post
+title: "Library项目中资源id使用case时报错"
+description: ""
+category: AdavancedPart
+tags: [AdavancedPart]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
+
 Library项目中资源id使用case时报错
 ===
 

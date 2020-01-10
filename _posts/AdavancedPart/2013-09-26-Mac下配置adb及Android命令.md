@@ -1,3 +1,18 @@
+---
+layout: post
+title: "Mac下配置adb及Android命令"
+description: ""
+category: AdavancedPart
+tags: [AdavancedPart]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
+
+
 Mac下配置adb及Android命令
 ===
 

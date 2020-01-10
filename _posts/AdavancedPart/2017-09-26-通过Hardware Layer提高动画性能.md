@@ -1,3 +1,16 @@
+---
+layout: post
+title: "通过Hardware Layer提高动画性能"
+description: ""
+category: AdavancedPart
+tags: [AdavancedPart]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
 通过Hardware Layer提高动画性能
 ===
 
