@@ -1,3 +1,19 @@
+---
+layout: post
+title: "AndroidStudio提高Build速度"
+description: ""
+category: AndroidStudioCourse
+tags: [AndroidStudioCourse]
+imagefeature: blog/bg.jpg
+comments: true
+mathjax: null
+featured: false
+published: true
+---
+
+
+
+
 AndroidStudio提高Build速度
 ===
 
